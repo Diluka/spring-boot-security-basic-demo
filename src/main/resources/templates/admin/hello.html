@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <div>Hello, ADMINISTRATOR!</div>
+        <table>
+            <thead>
+                <tr>
+                    <th th:text="${courtCol}">法院</th>
+                    <th th:text="${usernameCol}">用户名</th>
+                    <th th:text="${pwdCol}">密码</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="u : ${users}">
+                    <td th:text="${u.courtTest.courtName}">法院</td>
+                    <td th:text="${u.userinfoPK.username}">名字</td>
+                    <td th:text="${u.password}">密码</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul th:each="b : ${beans}">
+            <li th:text="${b}"></li>
+        </ul>
+    </body>
+</html>

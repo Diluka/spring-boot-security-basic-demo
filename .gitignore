@@ -57,3 +57,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+nbactions.xml
+nb-configuration.xml
+/target/*
